@@ -1,7 +1,8 @@
 const express = require('express');
 const mongoose= require('mongoose');
 require("dotenv").config();
-const routes = require("./routes/usuario");
+const routes_u = require("./routes/usuario");
+const routes_p = require("./routes/producto");
 
 const app= express();
 const port = process.env.PORT || 9000;
@@ -9,7 +10,8 @@ const port = process.env.PORT || 9000;
 //midlewares
 
 app.use(express.json());
-app.use('/api',routes);
+app.use('/api',routes_u);
+app.use('/api',routes_p);
 
 //route probe
 app.get('/', (req,res) =>
