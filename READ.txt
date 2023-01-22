@@ -1,0 +1,3 @@
+PARA INICIAR COLOCAR: npm run start
+
+PARA PRUEBAS se puede utilizar el: request.http
